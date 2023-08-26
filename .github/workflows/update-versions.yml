@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Checkout Branch
-        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
 
       - name: Get Latest Core Version
         id: get-core
@@ -101,7 +101,7 @@ jobs:
     needs: setup
     steps:
       - name: Checkout Branch
-        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
 
       - name: Create Update Versions Branch
         run: |
@@ -109,7 +109,7 @@ jobs:
           git push -u origin update-versions
 
       - name: Checkout Update Versions Branch
-        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
         with:
           ref: update-versions
 
